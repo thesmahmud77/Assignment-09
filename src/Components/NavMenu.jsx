@@ -1,14 +1,16 @@
-import React from "react";
+import React, { use } from "react";
 import { NavLink } from "react-router";
 // import DpImg from "../assets/DpImg";
 import { CgProfile } from "react-icons/cg";
+import { AuthContext } from "../Provider/AuthProvider";
 
 export default function NavMenu() {
+  const { user } = use(AuthContext);
   return (
     <div className=" grid grid-cols-12 items-center justify-between">
       <div className="logo font-bold text-2xl col-span-3 flex items-center justify-center">
         <NavLink to="/" className={"text-xl font-bold"}>
-          Logo
+          {user && user.email}
         </NavLink>
       </div>
       <div className="NavMenu flex items-center justify-center col-span-6 gap-3">
@@ -45,7 +47,7 @@ export default function NavMenu() {
       </div>
       <div className="profile col-span-3 flex items-center justify-center">
         <NavLink to={"/profile"}>
-          <CgProfile size={30} />
+          {user ? user.photoURL : <CgProfile size={30} />}
         </NavLink>
       </div>
     </div>
