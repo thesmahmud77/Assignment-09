@@ -1,0 +1,167 @@
+[
+  {
+    "serviceId": 1,
+    "image": "https://images.unsplash.com/photo-1583337130417-3346a1be7dee?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Winter Coat Fitting",
+    "category": "Clothing",
+    "description": "Professional sizing and fitting for high-quality winter coats to keep your pet warm during snow walks.",
+    "price": 25,
+    "duration": "30 mins",
+    "counselor": "Dr. Sarah Adams",
+    "rating": 4.8
+  },
+  {
+    "serviceId": 2,
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Paw Pad Protection",
+    "category": "Grooming",
+    "description": "Deep moisturizing treatment for paws to prevent cracking and irritation from ice and road salt.",
+    "price": 15,
+    "duration": "20 mins",
+    "counselor": "James Wilson",
+    "rating": 4.9
+  },
+  {
+    "serviceId": 3,
+    "image": "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Winter Diet Planning",
+    "category": "Health",
+    "description": "Expert advice on adjusting your pet's calorie intake during the less active winter months.",
+    "price": 40,
+    "duration": "45 mins",
+    "counselor": "Dr. Emily Brown",
+    "rating": 4.7
+  },
+  {
+    "serviceId": 4,
+    "image": "https://images.unsplash.com/photo-1537151608828-ea2b11777ee8?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Indoor Exercise Session",
+    "category": "Fitness",
+    "description": "Guided indoor play and exercise routines for pets who cannot go outside due to extreme cold.",
+    "price": 30,
+    "duration": "1 hour",
+    "counselor": "Mark Stevens",
+    "rating": 4.6
+  },
+  {
+    "serviceId": 5,
+    "image": "https://images.unsplash.com/photo-1591768793355-74d7ca736056?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Heated Bed Installation",
+    "category": "Comfort",
+    "description": "Safe installation of energy-efficient heated beds designed for senior pets with joint pain.",
+    "price": 55,
+    "duration": "40 mins",
+    "counselor": "Tech Kevin",
+    "rating": 4.5
+  },
+  {
+    "serviceId": 6,
+    "image": "https://images.unsplash.com/photo-1513284412184-5314f884f02b?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Moisturizing Bath",
+    "category": "Grooming",
+    "description": "Specially formulated oatmeal baths to combat dry, itchy skin caused by indoor heating.",
+    "price": 35,
+    "duration": "50 mins",
+    "counselor": "James Wilson",
+    "rating": 4.8
+  },
+  {
+    "serviceId": 7,
+    "image": "https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Winter Bootie Training",
+    "category": "Training",
+    "description": "Training sessions to help your pet get comfortable wearing protective winter boots.",
+    "price": 20,
+    "duration": "30 mins",
+    "counselor": "Lisa Ray",
+    "rating": 4.4
+  },
+  {
+    "serviceId": 8,
+    "image": "https://images.unsplash.com/photo-1576201836106-db1758fd1c97?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Immunity Boost Check",
+    "category": "Health",
+    "description": "Comprehensive health checkup focused on boosting the immune system for the flu season.",
+    "price": 60,
+    "duration": "1 hour",
+    "counselor": "Dr. Sarah Adams",
+    "rating": 4.9
+  },
+  {
+    "serviceId": 9,
+    "image": "https://images.unsplash.com/photo-1544568100-847a948585b9?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Cozy Night Boarding",
+    "category": "Accommodation",
+    "description": "Luxury overnight boarding in climate-controlled rooms with warm blankets and 24/7 care.",
+    "price": 75,
+    "duration": "Per Night",
+    "counselor": "Anna Miller",
+    "rating": 5.0
+  },
+  {
+    "serviceId": 10,
+    "image": "https://images.unsplash.com/photo-1444212477490-ca407925329e?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Cold Weather Safety",
+    "category": "Education",
+    "description": "One-on-one session teaching owners how to identify signs of hypothermia and frostbite.",
+    "price": 10,
+    "duration": "30 mins",
+    "counselor": "Dr. Emily Brown",
+    "rating": 4.7
+  },
+  {
+    "serviceId": 11,
+    "image": "https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Cat Thermal Wrap",
+    "category": "Clothing",
+    "description": "Lightweight thermal wraps designed specifically for cats who love to sit by windows.",
+    "price": 18,
+    "duration": "15 mins",
+    "counselor": "Lisa Ray",
+    "rating": 4.3
+  },
+  {
+    "serviceId": 12,
+    "image": "https://images.unsplash.com/photo-1504595403659-9088ce801e29?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Ear & Tail Protection",
+    "category": "Health",
+    "description": "Consultation on protecting exposed areas like ears and tails during long winter walks.",
+    "price": 12,
+    "duration": "20 mins",
+    "counselor": "Dr. Sarah Adams",
+    "rating": 4.6
+  },
+  {
+    "serviceId": 13,
+    "image": "https://images.unsplash.com/photo-1527362950785-f487a7c1fe48?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Winter Stress Relief",
+    "category": "Therapy",
+    "description": "Calming massage and aroma therapy for pets who get anxious during winter storms.",
+    "price": 45,
+    "duration": "40 mins",
+    "counselor": "James Wilson",
+    "rating": 4.8
+  },
+  {
+    "serviceId": 14,
+    "image": "https://images.unsplash.com/photo-1589924691106-073b1381cb35?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Indoor Agility Kit",
+    "category": "Fitness",
+    "description": "Set up of portable agility kits inside your home to keep high-energy dogs active.",
+    "price": 50,
+    "duration": "1 hour",
+    "counselor": "Mark Stevens",
+    "rating": 4.7
+  },
+  {
+    "serviceId": 15,
+    "image": "https://images.unsplash.com/photo-1513284412184-5314f884f02b?q=80&w=600&auto=format&fit=crop",
+    "serviceName": "Fleece Pajama Party",
+    "category": "Events",
+    "description": "A social event for small pets to interact in a warm indoor environment wearing fleece.",
+    "price": 5,
+    "duration": "2 hours",
+    "counselor": "Anna Miller",
+    "rating": 4.9
+  }
+]
