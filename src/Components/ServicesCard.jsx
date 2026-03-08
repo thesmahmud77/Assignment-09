@@ -2,8 +2,15 @@ import React from "react";
 import { Link } from "react-router";
 
 const ServicesCard = ({ singlePetData }) => {
-  const { id, image, serviceName, category, pricing, counselor, rating } =
-    singlePetData;
+  const {
+    serviceId,
+    image,
+    serviceName,
+    category,
+    pricing,
+    counselor,
+    rating,
+  } = singlePetData;
 
   return (
     <div className="card card-compact bg-base-100 shadow-xl border border-blue-100 hover:shadow-2xl transition-all duration-300">
@@ -40,7 +47,7 @@ const ServicesCard = ({ singlePetData }) => {
         {/* View Details Button [cite: 81] */}
         <div className="card-actions mt-4">
           <Link
-            to={`/service/${id}`}
+            to={`/service/${serviceId}`}
             className="btn btn-primary bg-blue-600 hover:bg-blue-700 border-none text-white w-full normal-case"
           >
             View Details

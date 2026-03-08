@@ -6,6 +6,7 @@ import Home from "../Pages/Home";
 import LoginPage from "../Pages/LoginPage";
 import RegisterPage from "../Pages/RegisterPage";
 import MyProfile from "../Pages/MyProfile";
+import ServiceDetails from "../Pages/ServiceDetails";
 
 export const router = createBrowserRouter([
   {
@@ -30,5 +31,10 @@ export const router = createBrowserRouter([
   {
     path: "/profile",
     element: <MyProfile></MyProfile>,
+  },
+  {
+    path: "/service/:id",
+    element: <ServiceDetails></ServiceDetails>,
+    loader: () => fetch("/Data.json"),
   },
 ]);

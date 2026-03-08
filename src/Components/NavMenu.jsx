@@ -5,7 +5,18 @@ import { CgProfile } from "react-icons/cg";
 import { AuthContext } from "../Provider/AuthProvider";
 
 export default function NavMenu() {
-  const { user } = use(AuthContext);
+  const { user, logOut } = use(AuthContext);
+  const handleLogout = () => {
+    console.log("user Trying to Logout");
+    logOut()
+      .then(() => {
+        alert("Logout Successfully");
+      })
+      .catch((error) => {
+        // An error happened.
+        console.log(error);
+      });
+  };
   return (
     <div className=" grid grid-cols-12 items-center justify-between">
       <div className="logo font-bold text-2xl col-span-3 flex items-center justify-center">
@@ -24,30 +35,26 @@ export default function NavMenu() {
         >
           Home
         </NavLink>
-        <NavLink
-          to="/login"
-          className={({ isActive }) =>
-            isActive
-              ? "text-xl font-bold border-b-4 border-blue-500 pb-1"
-              : "text-xl font-bold"
-          }
-        >
-          Login
-        </NavLink>
-        <NavLink
-          to="/register"
-          className={({ isActive }) =>
-            isActive
-              ? "text-xl font-bold border-b-4 border-blue-500 pb-1"
-              : "text-xl font-bold"
-          }
-        >
-          Register
-        </NavLink>
       </div>
       <div className="profile col-span-3 flex items-center justify-center">
+        {user ? (
+          <button
+            onClick={handleLogout}
+            className={"text-xl font-bold bg-amber-400 px-10 py-2 rounded-2xl"}
+          >
+            logout
+          </button>
+        ) : (
+          <NavLink
+            to="/login"
+            className={"text-xl font-bold bg-amber-400 px-10 py-2 rounded-2xl"}
+          >
+            Login
+          </NavLink>
+        )}
+
         <NavLink to={"/profile"}>
-          {user ? user.photoURL : <CgProfile size={30} />}
+          <CgProfile size={30} />
         </NavLink>
       </div>
     </div>
