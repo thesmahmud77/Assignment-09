@@ -1,22 +1,29 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import NavMenu from "../Components/NavMenu";
 import FooterMenu from "../Components/FooterMenu";
 import { useLoaderData, useParams } from "react-router";
+import SingleServiceDetails from "../Components/SingleServiceDetails";
 
 const ServiceDetails = () => {
-  const [service, setService] = useState({});
-  const servicedata = useLoaderData();
+  const serviceData = useLoaderData();
   const { id } = useParams();
-  console.log(id);
+  const [service, setService] = useState({});
+
+  useEffect(() => {
+    const foundService = serviceData.find(
+      (singleServices) => singleServices.serviceId == id,
+    );
+    if (foundService) {
+      setService(foundService);
+    }
+  }, [serviceData, id]);
+
+  // console.log(service);
   return (
     <div>
       <NavMenu></NavMenu>
-      <div>
-        const SingleServiceData =
-        {servicedata.find((singleService) => singleService.serviceId == id)}
-        setService(SingleServiceData)
-      </div>
-      {/* Modiul 51-5 */}
+      <div></div>
+      <SingleServiceDetails service={service}></SingleServiceDetails>
       <FooterMenu></FooterMenu>
     </div>
   );

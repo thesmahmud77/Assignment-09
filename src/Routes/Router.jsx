@@ -1,5 +1,4 @@
 import React from "react";
-
 import { createBrowserRouter } from "react-router";
 import HomeLayout from "../Layouts/HomeLayout";
 import Home from "../Pages/Home";
@@ -7,6 +6,7 @@ import LoginPage from "../Pages/LoginPage";
 import RegisterPage from "../Pages/RegisterPage";
 import MyProfile from "../Pages/MyProfile";
 import ServiceDetails from "../Pages/ServiceDetails";
+import PrivateRoute from "../Provider/PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -34,7 +34,11 @@ export const router = createBrowserRouter([
   },
   {
     path: "/service/:id",
-    element: <ServiceDetails></ServiceDetails>,
+    element: (
+      <PrivateRoute>
+        <ServiceDetails></ServiceDetails>
+      </PrivateRoute>
+    ),
     loader: () => fetch("/Data.json"),
   },
 ]);
