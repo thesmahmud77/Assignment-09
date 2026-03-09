@@ -1,10 +1,15 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import NavMenu from "../Components/NavMenu";
-import { Link } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../Provider/AuthProvider";
 
 export default function LoginPage() {
+  const [error, SetError] = useState("");
+  const location = useLocation();
+  console.log(location);
+  const navigate = useNavigate();
+
   const { signIn } = use(AuthContext);
   const handleLogin = (e) => {
     e.preventDefault();
@@ -16,11 +21,13 @@ export default function LoginPage() {
       .then((result) => {
         const user = result.user;
         console.log(user);
+        navigate(`${location.state ? location.state : "/"}`);
       })
       .catch((error) => {
         const errorCode = error.code;
-        const errorMessage = error.message;
-        alert(errorCode, errorMessage);
+        // const errorMessage = error.message;
+        // alert(errorCode, errorMessage);
+        SetError(errorCode);
       });
   };
   return (
@@ -47,6 +54,9 @@ export default function LoginPage() {
           <div>
             <a className="link link-hover">Forgot password?</a>
           </div>
+
+          {error && <p className="text-red-500 text-xl">{error}</p>}
+
           <button type="submit" className="btn btn-neutral mt-4">
             Login
           </button>

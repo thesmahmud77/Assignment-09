@@ -1,14 +1,22 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import { Link } from "react-router";
 import { FaEye } from "react-icons/fa";
 import { AuthContext } from "../Provider/AuthProvider";
 
 export default function RegisterPage() {
+  const [nameError, SetNameError] = useState("");
   // const { createUser } = use(AuthContext);
   const { createUser, SetUser } = use(AuthContext);
   const handleRegister = (e) => {
     e.preventDefault();
     const fontTiger = e.target;
+    const name = fontTiger.email.vlaue;
+    if (name.length < 5) {
+      SetNameError("Name Should be mor then 5 characters");
+      return;
+    } else {
+      SetNameError("");
+    }
     const email = fontTiger.email.value;
     const password = fontTiger.password.value;
     // console.log({ name, email, password });
@@ -30,6 +38,7 @@ export default function RegisterPage() {
       <form onSubmit={handleRegister}>
         <fieldset className="fieldset text-start mt-8">
           {/* Name */}
+          {nameError && <p className="text-red-500 text-xl">{nameError}</p>}
           <label className="label">Name</label>
           <input
             name="name"

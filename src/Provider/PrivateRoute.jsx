@@ -1,11 +1,14 @@
 import React, { use } from "react";
 import { AuthContext } from "./AuthProvider";
-import { Navigate } from "react-router";
+import { Navigate, useLocation } from "react-router";
 import { RiTumblrFill } from "react-icons/ri";
 import Loading from "../Pages/Loading";
 
 const PrivateRoute = ({ children }) => {
   const { user, loading } = use(AuthContext);
+
+  const location = useLocation();
+  console.log(location);
   console.log(user, loading);
   if (loading) {
     return <Loading></Loading>;
@@ -13,7 +16,7 @@ const PrivateRoute = ({ children }) => {
   if (user && user?.email) {
     return children;
   }
-  return <Navigate to={"/login"}></Navigate>;
+  return <Navigate state={location.pathname} to={"/login"}></Navigate>;
 };
 
 export default PrivateRoute;
