@@ -25,7 +25,7 @@ const Home = () => {
             healthy pet.
           </p>
         </div>
-        <div className="grid grid-cols-3">
+        <div className="grid grid-cols-3 gap-5">
           {data.map((singlePetData) => (
             <ServicesCard
               key={singlePetData.id}

@@ -2,7 +2,7 @@ import React from "react";
 
 export default function WinterCare() {
   return (
-    <div className="container mx-auto px-4">
+    <div className="container mx-auto px-4 mt-15">
       <h2 className="text-3xl font-bold text-center text-blue-900 mb-8">
         Winter Care Tips for Pets
       </h2>
