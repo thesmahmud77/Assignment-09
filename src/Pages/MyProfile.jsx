@@ -1,27 +1,41 @@
-import React, { use } from "react";
+import React, { useContext } from "react";
 import NavMenu from "../Components/NavMenu";
 import FooterMenu from "../Components/FooterMenu";
-import image from "../assets/dp.jpeg";
+import image from "../assets/dummyDP.png";
 import { AuthContext } from "../Provider/AuthProvider";
 
 const MyProfile = () => {
-  const user = use(AuthContext);
-  console.log(user);
+  const { user } = useContext(AuthContext);
+
   return (
     <div className="max-w-[1240px] mx-auto">
-      <NavMenu></NavMenu>
-      <div className="flex items-center justify-center gap-30 min-h-screen">
+      <NavMenu />
+
+      <div className="flex flex-col md:flex-row items-center justify-center gap-16 min-h-screen">
+        {/* Profile Image */}
         <div>
           <figure>
-            <img width={200} src={image} alt="" />
+            <img
+              className="w-52 h-52 object-cover rounded-lg shadow-lg"
+              src={user?.photoURL || image}
+              alt="profile"
+            />
           </figure>
         </div>
-        <div>
-          <h1 className="text-4xl font-bold">Md Mahmudul Hossain</h1>
-          <p>Web Developer</p>
+
+        {/* Profile Info */}
+        <div className="text-center md:text-left">
+          <h1 className="text-4xl font-bold">
+            {user?.displayName || "Guest User"}
+          </h1>
+
+          <p className="text-lg mt-2 text-gray-600">Web Developer</p>
+
+          <p className="text-md mt-2 text-gray-500">{user?.email}</p>
         </div>
       </div>
-      <FooterMenu></FooterMenu>
+
+      <FooterMenu />
     </div>
   );
 };

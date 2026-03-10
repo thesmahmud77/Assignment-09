@@ -2,24 +2,24 @@ import React, { use } from "react";
 import { NavLink } from "react-router";
 // import DpImg from "../assets/DpImg";
 import { CgProfile } from "react-icons/cg";
+import image from "../assets/dummyDP.png";
 import { AuthContext } from "../Provider/AuthProvider";
 
 export default function NavMenu() {
   const { user, logOut } = use(AuthContext);
-  console.log(user);
   const handleLogout = () => {
-    console.log("user Trying to Logout");
+    // console.log("user Trying to Logout");
     logOut()
       .then(() => {
         alert("Logout Successfully");
       })
       .catch((error) => {
         // An error happened.
-        console.log(error);
+        // console.log(error);
       });
   };
   return (
-    <div className=" grid grid-cols-12 items-center justify-between bg-base-200">
+    <div className="p-5 grid grid-cols-12 items-center justify-between bg-base-200">
       <div className="logo font-bold text-2xl col-span-3 flex items-center justify-center">
         <NavLink to="/" className={"text-xl font-bold"}>
           {/* {user && user.email} */}
@@ -57,7 +57,14 @@ export default function NavMenu() {
 
         <NavLink to={"/profile"}>
           {/* <CgProfile size={30} /> */}
-          {user ? <CgProfile size={30} /> : ""}
+          {/* {user ? <CgProfile size={30} /> : ""} */}
+          <figure>
+            <img
+              className="w-10 h-10 object-cover rounded-lg shadow-2xl"
+              src={user?.photoURL || image}
+              alt="profile"
+            />
+          </figure>
         </NavLink>
       </div>
     </div>

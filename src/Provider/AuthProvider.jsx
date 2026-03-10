@@ -14,7 +14,7 @@ export const AuthContext = createContext();
 const AuthProvider = ({ children }) => {
   const [user, SetUser] = useState(null);
   const [loading, setLoading] = useState(true);
-  console.log(user);
+  // console.log(user);
 
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(Auth, email, password);

@@ -9,7 +9,7 @@ export default function LoginPage() {
   const [error, SetError] = useState("");
   const [showPassword, setShowPassword] = useState(false);
   const location = useLocation();
-  console.log(location);
+  // console.log(location);
   const navigate = useNavigate();
 
   const { signIn } = use(AuthContext);
@@ -18,7 +18,7 @@ export default function LoginPage() {
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log({ email, password });
+    // console.log({ email, password });
     signIn(email, password)
       .then((result) => {
         const user = result.user;
