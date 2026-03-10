@@ -7,12 +7,14 @@
 @plugin "daisyui/theme" {
   name: "light";
   default: true;
-  --color-primary: #403f3f;
-  --color-secondary: #d72050;
-  --color-base-200: #f3f3f3;
-  --color-base-300: #e7e7e7;
-  --color-base-500: #ffb3b3;
+  --color-primary: #ff782d;
+  --color-secondary: #1a202c;
+  --color-base-50: #fff7ed;
+  --color-base-100: #ffedd5;
+  --color-base-200: #fed7aa;
+  --color-base-300: #fdba74;
   --color-accent: #706f6f;
+  --color-heading: #2d2d2d;
 }
 
 * {

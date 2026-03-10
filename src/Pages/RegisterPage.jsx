@@ -27,13 +27,13 @@ export default function RegisterPage() {
         SetUser(user);
       })
       .catch((error) => {
-        const errorCode = error.code;
+        // const errorCode = error.code;
         const errorMessage = error.message;
         alert(errorMessage);
       });
   };
   return (
-    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-3xl mx-auto mt-5 bg-green-100 border-1 border-green-900 py-5 p-10">
+    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-3xl mx-auto mt-5 bg-green-100 border-1 border-green-900 py-5 p-10 mt-60">
       <h1 className="font-bold text-4xl">Please Register</h1>
       <form onSubmit={handleRegister}>
         <fieldset className="fieldset text-start mt-8">
@@ -79,7 +79,7 @@ export default function RegisterPage() {
 
         <p className="text-[14px] text-black mt-5">
           Already Register ?
-          <Link className="text-pink-500 mx-2" to={"/login"}>
+          <Link className="bg-base-primary mx-2 bg-primary" to={"/login"}>
             Login
           </Link>
         </p>

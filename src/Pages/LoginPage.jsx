@@ -31,7 +31,7 @@ export default function LoginPage() {
       });
   };
   return (
-    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-3xl mx-auto mt-5 bg-green-100 border-1 border-green-900 p-10">
+    <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-3xl mx-auto mt-5 bg-green-100 border-1 border-green-900 p-10 mt-60">
       <h1 className="font-bold text-4xl">Please Login</h1>
       <form onSubmit={handleLogin}>
         <fieldset className="fieldset text-start">
@@ -57,7 +57,7 @@ export default function LoginPage() {
 
           {error && <p className="text-red-500 text-xl">{error}</p>}
 
-          <button type="submit" className="btn btn-neutral mt-4">
+          <button type="submit" className="btn mt-4 bg-primary">
             Login
           </button>
         </fieldset>
@@ -69,7 +69,7 @@ export default function LoginPage() {
         </Link>
         <p className="text-[14px] text-black mt-5">
           Dont have an Account ?
-          <Link className="text-pink-500 mx-2" to={"/register"}>
+          <Link className="bg-primary mx-2" to={"/register"}>
             Register
           </Link>
         </p>

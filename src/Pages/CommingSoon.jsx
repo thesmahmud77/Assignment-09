@@ -1,16 +1,17 @@
 import React from "react";
 import NavMenu from "../Components/NavMenu";
-import { Outlet } from "react-router";
 import FooterMenu from "../Components/FooterMenu";
 
-export default function HomeLayout() {
+const CommingSoon = () => {
   return (
-    <div className="max-w-[1240px] mx-auto">
+    <div>
       <NavMenu></NavMenu>
-      <div className="min-h-screen">
-        <Outlet></Outlet>
+      <div className="flex items-center justify-center min-h-screen">
+        <h1 className="font-bold text-6xl">COMMING SOON</h1>
       </div>
       <FooterMenu></FooterMenu>
     </div>
   );
-}
+};
+
+export default CommingSoon;

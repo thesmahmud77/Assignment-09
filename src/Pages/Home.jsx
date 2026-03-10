@@ -11,8 +11,20 @@ const Home = () => {
   // console.log(Data);
   return (
     <div>
-      <ScrollingHero></ScrollingHero>
-      <section>
+      <div>
+        <ScrollingHero></ScrollingHero>
+      </div>
+
+      <section className="my-20">
+        <div className="my-5">
+          <h1 className="font-bold text-4xl text-center mb-1">
+            <spen className="text-primary">Warmth & Care</spen> for Your Pets
+          </h1>
+          <p className="text-center">
+            Discover the best winter wellness and grooming services for a happy,
+            healthy pet.
+          </p>
+        </div>
         <div className="grid grid-cols-3">
           {data.map((singlePetData) => (
             <ServicesCard
@@ -22,7 +34,6 @@ const Home = () => {
           ))}
         </div>
       </section>
-
       <WinterCare></WinterCare>
       <Testimonial></Testimonial>
       <PetGear></PetGear>

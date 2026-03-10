@@ -1,11 +1,14 @@
-import React from "react";
+import React, { use } from "react";
 import NavMenu from "../Components/NavMenu";
 import FooterMenu from "../Components/FooterMenu";
 import image from "../assets/dp.jpeg";
+import { AuthContext } from "../Provider/AuthProvider";
 
 const MyProfile = () => {
+  const user = use(AuthContext);
+  console.log(user);
   return (
-    <div>
+    <div className="max-w-[1240px] mx-auto">
       <NavMenu></NavMenu>
       <div className="flex items-center justify-center gap-30 min-h-screen">
         <div>

@@ -5,7 +5,7 @@ export default function PetGear() {
     <div>
       <section className="py-12 bg-blue-900 text-white" data-aos="fade-right">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center gap-10">
-          <div className="md:w-1/2">
+          <div className="md:w-1/2 gap-2">
             <h2 className="text-3xl font-bold mb-4">Don't Let Them Chill!</h2>
             <p className="text-blue-100 mb-6 italic text-lg">
               "The best way to show love in winter is by providing warmth and

@@ -7,6 +7,7 @@ import RegisterPage from "../Pages/RegisterPage";
 import MyProfile from "../Pages/MyProfile";
 import ServiceDetails from "../Pages/ServiceDetails";
 import PrivateRoute from "../Provider/PrivateRoute";
+import CommingSoon from "../Pages/CommingSoon";
 
 export const router = createBrowserRouter([
   {
@@ -40,5 +41,9 @@ export const router = createBrowserRouter([
       </PrivateRoute>
     ),
     loader: () => fetch("/Data.json"),
+  },
+  {
+    path: "/comming-soon",
+    element: <CommingSoon></CommingSoon>,
   },
 ]);

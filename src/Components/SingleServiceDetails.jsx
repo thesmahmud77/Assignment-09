@@ -4,20 +4,23 @@ import { Navigate, NavLink } from "react-router";
 const SingleServiceDetails = ({ service }) => {
   const { serviceName, image, description, pricing } = service;
   return (
-    <div className="flex items-center justify-between">
+    <div className="flex items-center justify-between gap-20 my-20">
       <div>
-        <img
-          src={image}
-          alt={serviceName}
-          className="w-full rounded-2xl mb-4"
-        />
+        <figure>
+          <img
+            width={50}
+            height={50}
+            src={image}
+            alt={serviceName}
+            className="w-full rounded-2xl mb-4"
+          />
+        </figure>
       </div>
-      <div>
+      <div className="text-center">
         <h1 className="text-3xl font-bold">{serviceName}</h1>
         <p className="text-gray-600 mt-2">{description}</p>
-        <p className="text-xl font-bold text-blue-600 mt-4">Price: {pricing}</p>
-        <NavLink className={"btn btn-primary"} to={"/"}>
-          get back
+        <NavLink className={"btn btn-primary mt-5 px-10"} to={"/"}>
+          Get Back
         </NavLink>
       </div>
     </div>

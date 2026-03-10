@@ -20,9 +20,8 @@ const ServiceDetails = () => {
 
   // console.log(service);
   return (
-    <div>
+    <div className="max-w-[1240px] mx-auto">
       <NavMenu></NavMenu>
-      <div></div>
       <SingleServiceDetails service={service}></SingleServiceDetails>
       <FooterMenu></FooterMenu>
     </div>
