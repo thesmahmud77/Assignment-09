@@ -3,9 +3,11 @@ import NavMenu from "../Components/NavMenu";
 import { Link, useLocation, useNavigate } from "react-router";
 import { FcGoogle } from "react-icons/fc";
 import { AuthContext } from "../Provider/AuthProvider";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function LoginPage() {
   const [error, SetError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const location = useLocation();
   console.log(location);
   const navigate = useNavigate();
@@ -43,14 +45,23 @@ export default function LoginPage() {
             className="input"
             placeholder="Email"
           />
-          {/* Password */}
-          <label className="label">Password</label>
-          <input
-            name="password"
-            type="password"
-            className="input"
-            placeholder="Password"
-          />
+          <div className="relative">
+            {/* Password */}
+            <label className="label">Password</label>
+            <input
+              name="password"
+              type={showPassword ? "text" : "password"}
+              className="input"
+              placeholder="Password"
+            />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-7 text-xl"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
           <div>
             <a className="link link-hover">Forgot password?</a>
           </div>

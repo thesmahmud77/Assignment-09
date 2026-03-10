@@ -1,12 +1,13 @@
 import React, { use, useState } from "react";
 import { Link } from "react-router";
-import { FaEye } from "react-icons/fa";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { AuthContext } from "../Provider/AuthProvider";
 
 export default function RegisterPage() {
   const [nameError, SetNameError] = useState("");
   // const { createUser } = use(AuthContext);
   const { createUser, SetUser } = use(AuthContext);
+  const [showPassword, setShowPassword] = useState(false);
   const handleRegister = (e) => {
     e.preventDefault();
     const fontTiger = e.target;
@@ -59,15 +60,22 @@ export default function RegisterPage() {
           {/* Password */}
           {/* Password */}
           {/* Password */}
-          <div className=" Password relative">
+          <div className="relative">
             <label className="label">Password</label>
             <input
               name="password"
-              type="password"
+              type={showPassword ? "text" : "password"}
               className="input"
               placeholder="Create a Password"
               required
             />
+            <button
+              type="button"
+              onClick={() => setShowPassword(!showPassword)}
+              className="absolute right-3 top-7 text-xl"
+            >
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
           </div>
           {/* Password */}
           {/* Password */}
