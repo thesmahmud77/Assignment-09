@@ -45,7 +45,7 @@
   },
   {
     "serviceId": 5,
-    "image": "https://images.unsplash.com/photo-1591768793355-74d7ca736056?q=80&w=600&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=800&auto=format&fit=crop",
     "serviceName": "Heated Bed Installation",
     "category": "Comfort",
     "description": "Safe installation of energy-efficient heated beds designed for senior pets with joint pain.",
@@ -56,7 +56,7 @@
   },
   {
     "serviceId": 6,
-    "image": "https://images.unsplash.com/photo-1513284412184-5314f884f02b?q=80&w=600&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?q=80&w=800&auto=format&fit=crop",
     "serviceName": "Moisturizing Bath",
     "category": "Grooming",
     "description": "Specially formulated oatmeal baths to combat dry, itchy skin caused by indoor heating.",
@@ -144,7 +144,7 @@
   },
   {
     "serviceId": 14,
-    "image": "https://images.unsplash.com/photo-1589924691106-073b1381cb35?q=80&w=600&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=800&auto=format&fit=crop",
     "serviceName": "Indoor Agility Kit",
     "category": "Fitness",
     "description": "Set up of portable agility kits inside your home to keep high-energy dogs active.",
@@ -155,7 +155,7 @@
   },
   {
     "serviceId": 15,
-    "image": "https://images.unsplash.com/photo-1513284412184-5314f884f02b?q=80&w=600&auto=format&fit=crop",
+    "image": "https://images.unsplash.com/photo-1596492784531-6e6eb5ea9993?q=80&w=800&auto=format&fit=crop",
     "serviceName": "Fleece Pajama Party",
     "category": "Events",
     "description": "A social event for small pets to interact in a warm indoor environment wearing fleece.",
